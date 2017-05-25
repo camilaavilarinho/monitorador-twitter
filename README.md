@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/github/license/vintasoftware/django-react-boilerplate.svg)](LICENSE.txt)
 
-# Monitorador de Atividades do Titter
+# Monitorador de Atividades do Twitter
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## About this boilerplate
 

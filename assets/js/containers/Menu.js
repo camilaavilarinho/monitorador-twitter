@@ -1,8 +1,9 @@
 import React from 'react';
 import FilterTerm from '../components/FilterTerm';
+// import FilterUser from './FilterUser';
 
 // eslint-disable-next-line react/prefer-stateless-function
-export default class Main extends React.Component {
+export default class Menu extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-toggleable-md navbar-light bg-faded">

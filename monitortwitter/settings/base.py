@@ -37,6 +37,8 @@ INSTALLED_APPS = [
 
     'common',
     'users',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,10 @@ WEBPACK_LOADER = {
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+# DRF
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

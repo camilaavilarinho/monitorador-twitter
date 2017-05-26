@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Menu from './Menu';
 import TweetsList from '../components/TweetsList';
+// import FilterUser from './FilterUser';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Main extends React.Component {

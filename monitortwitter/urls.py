@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^djangojs/', include('djangojs.urls')),
 
     url(r'^$', TemplateView.as_view(template_name='exampleapp/itworks.html'), name='home'),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

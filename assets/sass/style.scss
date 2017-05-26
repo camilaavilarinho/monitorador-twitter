@@ -9,3 +9,22 @@
 @import "global";
 @import "components/all";
 @import "pages/all";
+
+body{
+    background-color: #ecf0f1;
+}
+.bg-faded{
+  background-color: #fff;
+}
+
+ul{
+  margin-top: 50px;
+}
+li{
+
+}
+.card{
+  border-color: #fff;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}

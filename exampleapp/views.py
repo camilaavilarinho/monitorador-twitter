@@ -1,4 +1,7 @@
-from django.shortcuts import render  # noqa
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
-
-# Create your views here.
+#não está autenticando pq não consegue acessar o user do model
+@login_required
+def home(request):
+    return render(request, 'exampleapp/home.html')

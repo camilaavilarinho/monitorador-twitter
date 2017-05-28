@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'users',
 
     'rest_framework',
+
+    'social_django',
+    'exampleapp',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'monitortwitter.urls'
@@ -65,6 +70,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -127,3 +135,21 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URI = 'home'
+
+SOCIAL_AUTH_TWITTER_KEY = 'KbdCimbLBYg9mLbkQubdASnWh'
+SOCIAL_AUTH_TWITTER_SECRET = 'bLLNXcPLTrAn73JEXKijft2Fg6k9vRyFJuqBLRWH6sO1HsFLis'
+
+
+#SOCIAL_AUTH_USER_MODEL = 'users.User'

@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.contrib.auth import views as auth_views
 
-from exampleapp import views as core_views
+from monitorapp import views as core_views
 
 
 urlpatterns = [
